@@ -2,7 +2,6 @@ version: '3'
 services:
   homeassistant:
     image: ghcr.io/home-assistant/home-assistant:stable
-    network: host
+    network_mode: host
     privileged: true
     restart: unless-stopped
-    
