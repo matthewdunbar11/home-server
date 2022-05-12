@@ -1,4 +1,8 @@
 version: '3'
 services:
-  ubuntu:
-    image: busybox
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    network: host
+    privileged: true
+    restart: unless-stopped
+    
