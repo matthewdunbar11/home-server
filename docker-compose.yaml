@@ -4,7 +4,7 @@ services:
     image: ghcr.io/home-assistant/home-assistant:stable
     network_mode: host
     volumes:
-      - homeassistant:/config
+      - homeassistant_config:/config
     privileged: true
     restart: unless-stopped
 
