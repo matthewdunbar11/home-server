@@ -22,6 +22,5 @@ services:
       - "./mosquitto/log:/mosquitto/log"
     environment:
       - TZ=America/New_York
-    user: "${PUID}:${PGID}"
 volumes:
   homeassistant_config:
