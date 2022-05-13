@@ -17,10 +17,13 @@ services:
       - "1883:1883"
       - "1884:1884"
     volumes:
-      - "./mosquitto/config:/mosquitto/config"
-      - "./mosquitto/data:/mosquitto/data"
-      - "./mosquitto/log:/mosquitto/log"
+      - "mosquito_config:/mosquitto/config"
+      - "mosquito_data:/mosquitto/data"
+      - "mosquito_log:/mosquitto/log"
     environment:
       - TZ=America/New_York
 volumes:
   homeassistant_config:
+  mosquito_config:
+  mosquito_data:
+  mosquito_log:
