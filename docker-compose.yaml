@@ -7,6 +7,21 @@ services:
       - homeassistant_config:/config
     privileged: true
     restart: unless-stopped
-
+    depends_on:
+      - mosquitto
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+      - "1884:1884"
+    volumes:
+      - "./mosquitto/config:/mosquitto/config"
+      - "./mosquitto/data:/mosquitto/data"
+      - "./mosquitto/log:/mosquitto/log"
+    environment:
+      - TZ=Europe/Madrid
+    user: "${PUID}:${PGID}"
 volumes:
   homeassistant_config:
