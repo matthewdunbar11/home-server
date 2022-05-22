@@ -64,3 +64,5 @@ birdseye:
   height: 720
   quality: 8
   mode: continuous
+rtmp:
+  enabled: false
