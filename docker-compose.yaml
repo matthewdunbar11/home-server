@@ -15,7 +15,7 @@ services:
       - 1833:1833
   frigate:
     container_name: frigate
-    pull_policy: build
+    pull_policy: always
     privileged: true # this may not be necessary for all setups
     restart: unless-stopped
     build: ./frigate
