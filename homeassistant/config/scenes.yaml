@@ -1,0 +1,1311 @@
+- id: day
+  name: Day
+  entities:
+    light.living_room_fan_1:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 1
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_2:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 2
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_3:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 3
+      supported_features: 40
+      state: 'on'
+    light.living_room_lamp:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Lamp
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 1
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 2
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 3
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 4
+      supported_features: 40
+      state: 'on'
+    light.kitchen_lamp_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Kitchen Fan 1
+      supported_features: 40
+      state: 'on'
+    light.kitchen_lamp_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Kitchen Fan 2
+      supported_features: 40
+      state: 'on'
+    light.kitchen_lamp_1_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Kitchen Lamp 1
+      supported_features: 0
+      state: 'on'
+    light.kitchen_lamp_2_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Kitchen Lamp 2
+      supported_features: 0
+      state: 'on'
+    light.kitchen_lamp_3:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Kitchen Lamp 3
+      supported_features: 0
+      state: 'on'
+    light.stairs_bottom:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Stairs Bottom
+      supported_features: 40
+      state: 'on'
+    light.stairs_landing:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Stairs Landing
+      supported_features: 0
+      state: 'on'
+    light.stairs_top:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 302
+      hs_color:
+      - 27.382
+      - 49.044
+      rgb_color:
+      - 255
+      - 187
+      - 129
+      xy_color:
+      - 0.469
+      - 0.378
+      mode: normal
+      dynamics: none
+      friendly_name: Stairs Top
+      supported_features: 40
+      state: 'on'
+    light.sink_1:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Sink 1
+      supported_features: 0
+      state: 'on'
+    light.sink_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Sink 2
+      supported_features: 0
+      state: unavailable
+    light.sink_3:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Sink 3
+      supported_features: 0
+      state: 'on'
+    light.sconce_1:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      friendly_name: Sconce 1
+      supported_features: 7
+      state: 'off'
+    light.sconce_2:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      friendly_name: Sconce 2
+      supported_features: 7
+      state: 'off'
+    light.signify_netherlands_b_v_lwb014_91412a02_level_on_off:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_brightness:
+      friendly_name: Kitchen Fan 3 91412a02 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.patio_light_level_on_off:
+      supported_color_modes:
+      - brightness
+      off_brightness:
+      friendly_name: Patio Light level, on_off
+      supported_features: 41
+      state: 'off'
+  icon: mdi:weather-sunny
+- id: '1640705395764'
+  name: Evening
+  entities:
+    light.sconce_1:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      effect: Warm White
+      friendly_name: Sconce 1
+      supported_features: 7
+      state: 'on'
+    light.sconce_2:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Sconce 2
+      supported_features: 7
+      state: 'on'
+    light.living_room_fan_1:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 1
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_2:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 2
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_3:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 3
+      supported_features: 40
+      state: 'on'
+    light.living_room_lamp:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Lamp
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 1
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 2
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 3
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 4
+      supported_features: 40
+      state: 'on'
+    light.kitchen_lamp_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Kitchen Fan 1
+      supported_features: 40
+      state: 'on'
+    light.kitchen_lamp_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Kitchen Fan 2
+      supported_features: 40
+      state: 'on'
+    light.kitchen_lamp_1_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Kitchen Lamp 1
+      supported_features: 0
+      state: 'on'
+    light.kitchen_lamp_2_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Kitchen Lamp 2
+      supported_features: 0
+      state: 'on'
+    light.kitchen_lamp_3:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Kitchen Lamp 3
+      supported_features: 0
+      state: 'on'
+    light.stairs_bottom:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Stairs Bottom
+      supported_features: 40
+      state: 'on'
+    light.stairs_landing:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Stairs Landing
+      supported_features: 0
+      state: 'on'
+    light.signify_netherlands_b_v_lwb014_91412a02_level_on_off:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_brightness:
+      friendly_name: Kitchen Fan 3 91412a02 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.patio_light_level_on_off:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_brightness:
+      friendly_name: Patio Light level, on_off
+      supported_features: 41
+      state: 'on'
+  icon: mdi:weather-sunset
+- id: '1640705987153'
+  name: TV Paused
+  entities:
+    light.sconce_1:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 130
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      effect: Warm White
+      friendly_name: Sconce 1
+      supported_features: 7
+      state: 'on'
+    light.living_room_fan_1:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 125
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 1
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_2:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 125
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 2
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_3:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 122
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 3
+      supported_features: 40
+      state: 'on'
+    light.sconce_2:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 128
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Sconce 2
+      supported_features: 7
+      state: 'on'
+    light.living_room_lamp:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Lamp
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 1
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 2
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 125
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 3
+      supported_features: 40
+      state: 'on'
+    light.dining_room_fan_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 4
+      supported_features: 40
+      state: 'on'
+  icon: mdi:pause
+- id: '1640706235361'
+  name: TV Playing
+  entities:
+    light.sconce_1:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 26
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      effect: Warm White
+      friendly_name: Sconce 1
+      supported_features: 7
+      state: 'on'
+    light.living_room_fan_1:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 3
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 1
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_2:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 3
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 2
+      supported_features: 40
+      state: 'on'
+    light.living_room_fan_3:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 5
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 167
+      - 89
+      xy_color:
+      - 0.524
+      - 0.387
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 3
+      supported_features: 40
+      state: 'on'
+    light.sconce_2:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 26
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      friendly_name: Sconce 2
+      supported_features: 7
+      state: 'on'
+    light.living_room_lamp:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Lamp
+      supported_features: 40
+      state: 'off'
+    light.dining_room_fan_1:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 1
+      supported_features: 40
+      state: 'off'
+    light.dining_room_fan_2:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 2
+      supported_features: 40
+      state: 'off'
+    light.dining_room_fan_3:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 3
+      supported_features: 40
+      state: 'off'
+    light.dining_room_fan_4:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 4
+      supported_features: 40
+      state: 'off'
+    light.stairs_bottom:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 89
+      mode: normal
+      dynamics: none
+      friendly_name: Stairs Bottom
+      supported_features: 40
+      state: 'on'
+    light.kitchen_fan_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs Bathroom 1
+      supported_features: 40
+      state: 'on'
+    light.kitchen_fan_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs Bathroom 2
+      supported_features: 40
+      state: 'on'
+    light.kitchen_fan_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs Bathroom 3
+      supported_features: 40
+      state: 'on'
+  icon: mdi:television
+- id: '1640708006482'
+  name: Nightlight
+  entities:
+    light.stairs_landing:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 3
+      friendly_name: Stairs Landing
+      supported_features: 0
+      state: 'on'
+    light.sink_1:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      color_mode: brightness
+      brightness: 3
+      friendly_name: Sink 1
+      supported_features: 0
+      state: 'on'
+  icon: mdi:home-lightbulb-outline
+- id: '1640708179570'
+  name: Night
+  entities:
+    light.bedroom_fan_1:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Bedroom Fan 1
+      supported_features: 0
+      state: unavailable
+    light.bedroom_fan_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Bedroom Fan 2
+      supported_features: 0
+      state: unavailable
+    light.bedroom_fan_3:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Bedroom Fan 3
+      supported_features: 0
+      state: unavailable
+    light.bedroom_lamp_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Bedroom Lamp 2
+      supported_features: 0
+      state: unavailable
+    light.dining_room_fan_1:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 1
+      supported_features: 40
+      state: 'off'
+    light.dining_room_fan_3:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 3
+      supported_features: 40
+      state: 'off'
+    light.dining_room_fan_2:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 2
+      supported_features: 40
+      state: 'off'
+    light.kitchen_fan_1:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs Bathroom 1
+      supported_features: 40
+      state: 'off'
+    light.kitchen_fan_2:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs Bathroom 2
+      supported_features: 40
+      state: 'off'
+    light.kitchen_fan_3:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs Bathroom 3
+      supported_features: 40
+      state: 'off'
+    light.kitchen_lamp_1:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Kitchen Fan 1
+      supported_features: 40
+      state: 'off'
+    light.kitchen_lamp_2:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Kitchen Fan 2
+      supported_features: 40
+      state: 'off'
+    light.kitchen_lamp_1_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Kitchen Lamp 1
+      supported_features: 0
+      state: 'off'
+    light.kitchen_lamp_2_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Kitchen Lamp 2
+      supported_features: 0
+      state: 'off'
+    light.kitchen_lamp_3:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Kitchen Lamp 3
+      supported_features: 0
+      state: 'off'
+    light.living_room_fan_1:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 1
+      supported_features: 40
+      state: 'off'
+    light.living_room_fan_2:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 2
+      supported_features: 40
+      state: 'off'
+    light.living_room_fan_3:
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Fan 3
+      supported_features: 40
+      state: 'off'
+    light.living_room_lamp:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Living Room Lamp
+      supported_features: 40
+      state: 'off'
+    light.sconce_1:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      friendly_name: Sconce 1
+      supported_features: 7
+      state: 'off'
+    light.sconce_2:
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Cozy
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - TV time
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      supported_color_modes:
+      - color_temp
+      friendly_name: Sconce 2
+      supported_features: 7
+      state: 'off'
+    light.stairs_bottom:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Stairs Bottom
+      supported_features: 40
+      state: 'off'
+    light.stairs_landing:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Stairs Landing
+      supported_features: 0
+      state: 'off'
+    light.stairs_top:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Stairs Top
+      supported_features: 40
+      state: 'off'
+    light.sink_1:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Sink 1
+      supported_features: 0
+      state: 'off'
+    light.sink_2:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Sink 2
+      supported_features: 0
+      state: unavailable
+    light.sink_3:
+      supported_color_modes:
+      - brightness
+      - hs
+      - onoff
+      friendly_name: Sink 3
+      supported_features: 0
+      state: 'off'
+    light.dining_room_fan_4:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Dining Room Fan 4
+      supported_features: 40
+      state: 'off'
+    light.signify_netherlands_b_v_lwb014_91412a02_level_on_off:
+      supported_color_modes:
+      - brightness
+      off_brightness: 254
+      friendly_name: Kitchen Fan 3 91412a02 level, on_off
+      supported_features: 41
+      state: 'off'
+  icon: mdi:weather-night

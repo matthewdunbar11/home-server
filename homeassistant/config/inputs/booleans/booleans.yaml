@@ -1,0 +1,9 @@
+away:
+  name: Away Mode
+  icon: mdi:car
+night:
+  name: Night Mode Google Assistant
+  icon: mdi:weather-night
+tv_lights:
+  name: TV Lights
+  icon: mdi:television-classic

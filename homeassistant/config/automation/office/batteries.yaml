@@ -1,0 +1,42 @@
+- id: "keyboard-low-batteries"
+  alias: Office - Keyboard Batteries Low
+  trigger:
+    - platform: time
+      at: "16:30:00"
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.keyboard_battery
+      below: 20
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: notify.mobile_app_iphone
+      data:
+        message: Keyboard Battery Low
+  mode: single
+- id: "mouse-low-batteries"
+  alias: Office - Mouse Batteries Low
+  trigger:
+    - platform: time
+      at: "16:30:00"
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.mouse_battery
+      below: 20
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: notify.mobile_app_iphone
+      data:
+        message: Mouse Battery Low
+  mode: single

@@ -1,0 +1,20 @@
+- platform: mqtt
+  name: "Keyboard Battery"
+  device_class: battery
+  unique_id: "keyboard_battery"
+  unit_of_measurement: "%"
+  expire_after: 86400
+  device:
+    name: "Keyboard"
+    identifiers: "mac_keyboard"
+  state_topic: "sensors/office/keyboard_battery"
+- platform: mqtt
+  name: "Mouse Battery"
+  device_class: battery
+  unique_id: "mouse_battery"
+  unit_of_measurement: "%"
+  expire_after: 86400
+  device:
+    name: "Mouse"
+    identifiers: "mac_mouse"
+  state_topic: "sensors/office/mouse_battery"

@@ -1,0 +1,9 @@
+- binary_sensor:
+    - name: Yard Secure
+      unique_id: yard_secure
+      state: >
+        {{ is_state('binary_sensor.back_gate', 'off')
+            and is_state('binary_sensor.deck_gate', 'off') }}
+    - name: Watching Movie
+      state: >
+        {{state_attr("media_player.tv", "media_duration")|float > 2700}}

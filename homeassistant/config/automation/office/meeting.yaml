@@ -1,0 +1,53 @@
+- id: "1620319564983"
+  alias: Office - Meeting Monitor - Start
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.office_meeting
+      to: "on"
+  # condition:
+  #   - condition: time
+  #     after: "8:00"
+  #     before: "20:00"
+  #     weekday:
+  #       - mon
+  #       - tue
+  #       - wed
+  #       - thu
+  #       - fri
+  action:
+    - service: light.turn_on
+      data:
+        brightness_pct: 100
+        rgb_color:
+          - 80
+          - 150
+          - 235
+      target:
+        device_id: 93bb005a7351d2773998391ffb4d852c
+  mode: single
+- id: "1620319603548"
+  alias: Office - Meeting Monitor - Done
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.office_meeting
+      to: "off"
+  # condition:
+  #   - condition: time
+  #     after: "8:00"
+  #     before: "20:00"
+  #     weekday:
+  #       - mon
+  #       - tue
+  #       - wed
+  #       - thu
+  #       - fri
+  action:
+    - service: light.turn_on
+      target:
+        device_id: 93bb005a7351d2773998391ffb4d852c
+      data:
+        brightness_pct: 100
+        color_temp: 302
+  mode: single

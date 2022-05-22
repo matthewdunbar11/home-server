@@ -1,0 +1,12 @@
+- platform: mqtt
+  unique_id: "stairs-top-motion"
+  state_topic: "sensors/stairs/motion"
+  name: "Stairs Top Motion"
+  payload_on: "true"
+  payload_off: "false"
+- platform: mqtt
+  unique_id: "office-meeting"
+  state_topic: "sensors/office/meeting"
+  name: "Office Meeting"
+  payload_on: "true"
+  payload_off: "false"

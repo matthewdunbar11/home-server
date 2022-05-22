@@ -1,0 +1,66 @@
+- id: night_mode_google
+  alias: Night - Google Assistant
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night
+      to: "on"
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.home_mode
+      option: Night
+- id: day_mode_google
+  alias: Day - Google Assistant
+  trigger:
+    - platform: state
+      entity_id: input_select.home_mode
+      to: Day
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.night
+- id: "1619923972858"
+  alias: Night - Lights Off
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: input_select.home_mode
+      to: "Night"
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.night
+      data:
+        transition: 6
+  mode: single
+- id: "1620313093677"
+  alias: Night - Nightlight
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.hue_motion_sensor_1_motion
+  condition:
+    - condition: state
+      entity_id: input_select.home_mode
+      state: "Night"
+    - condition: or
+      conditions:
+        - condition: time
+          before: "05:55:00"
+        - condition: time
+          after: "18:00:00"
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id:
+          - scene.nightlight
+    - delay:
+        hours: 0
+        minutes: 5
+        seconds: 0
+        milliseconds: 0
+    - service: scene.turn_on
+      target:
+        entity_id:
+          - scene.night
+  mode: restart

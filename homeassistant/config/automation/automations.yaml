@@ -1,0 +1,43 @@
+- id: "1619903967240"
+  alias: I’m Home
+  description: ""
+  trigger:
+    - platform: zone
+      entity_id: person.matthew
+      zone: zone.home
+      event: enter
+    - platform: zone
+      entity_id: person.vanessa
+      zone: zone.home
+      event: enter
+  condition: []
+  action:
+    - service: light.turn_on
+      target:
+        area_id:
+          - kitchen
+          - dining_room
+          - living_room
+  mode: single
+- id: "1620160697324"
+  alias: Backup
+  description: ""
+  trigger:
+    - platform: time
+      at: "01:00:00"
+  condition: []
+  action:
+    - service: hassio.backup_full
+  mode: single
+- id: "restart"
+  alias: Restart
+  trigger:
+    - platform: time
+      at: "03:00:00"
+  condition:
+    - condition: time
+      weekday:
+        - sat
+  action:
+    service: homeassistant.restart
+  mode: single

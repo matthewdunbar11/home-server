@@ -1,0 +1,46 @@
+- id: "1619837064181"
+  alias: Office - Time To Work
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.muted
+      from: unavailable
+    - platform: time
+      at: "07:30:00"
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: time
+      after: "05:00:00"
+      before: "17:00:00"
+  action:
+    - service: light.turn_on
+      target:
+        area_id: office
+      data:
+        brightness_pct: 100
+  mode: single
+- id: "1619837504869"
+  alias: Office - Done for the Day
+  description: ""
+  trigger:
+    - platform: time
+      at: "17:30:00"
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: light.turn_off
+      target:
+        area_id: office
+  mode: single

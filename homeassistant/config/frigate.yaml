@@ -1,0 +1,68 @@
+mqtt:
+  host: core-mosquitto
+  user: homeassistant
+  password: eiM4Agh3rogh5Ne7ooghai0aaThoh1YujieQu5fa3xee3lu8iwee4iug4ahphoot
+cameras:
+  side:
+    ffmpeg:
+      input_args:
+        - -avoid_negative_ts
+        - make_zero
+        - -fflags
+        - nobuffer+genpts+discardcorrupt
+        - -flags
+        - low_delay
+        - -strict
+        - experimental
+        - -analyzeduration
+        - 1000M
+        - -probesize
+        - 1000M
+        - -rw_timeout
+        - "5000000"
+      inputs:
+        - path: https://192.168.86.51/flv?port=1935&app=bcs&stream=channel0_main.bcs&user=admin&password=10187770
+          roles:
+            - record
+            - rtmp
+        - path: https://192.168.86.51/flv?port=1935&app=bcs&stream=channel0_ext.bcs&user=admin&password=10187770
+          roles:
+            - detect
+  front:
+    ffmpeg:
+      input_args:
+        - -avoid_negative_ts
+        - make_zero
+        - -fflags
+        - nobuffer+genpts+discardcorrupt
+        - -flags
+        - low_delay
+        - -strict
+        - experimental
+        - -analyzeduration
+        - 1000M
+        - -probesize
+        - 1000M
+        - -rw_timeout
+        - "5000000"
+      inputs:
+        - path: https://192.168.86.53/flv?port=1935&app=bcs&stream=channel0_main.bcs&user=admin&password=10187770
+          roles:
+            - record
+            - rtmp
+        - path: https://192.168.86.53/flv?port=1935&app=bcs&stream=channel0_ext.bcs&user=admin&password=10187770
+          roles:
+            - detect
+detect:
+  enabled: true
+record:
+  enabled: true
+  retain:
+    days: 2
+    mode: all
+birdseye:
+  enabled: true
+  width: 1280
+  height: 720
+  quality: 8
+  mode: continuous

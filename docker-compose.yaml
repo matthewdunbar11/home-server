@@ -1,13 +1,12 @@
 version: "3"
 services:
-  # homeassistant:
-  #   image: ghcr.io/home-assistant/home-assistant:2022.5.2
-  #   network_mode: host
-  #   volumes:
-  #     - homeassistant_config:/config
-  #     - /etc/localtime:/etc/localtime:ro
-  #   privileged: true
-  #   restart: unless-stopped
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:2022.5.2
+    network_mode: host
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    privileged: true
+    restart: unless-stopped
   mqtt:
     container_name: mqtt
     build: ./mqtt

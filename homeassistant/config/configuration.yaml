@@ -1,0 +1,30 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include_dir_merge_list automation/
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+sensor: !include sensors/sensors.yaml
+binary_sensor: !include sensors/binary_sensors.yaml
+input_boolean: !include_dir_merge_named inputs/booleans/
+input_select: !include_dir_merge_named inputs/selects/
+cloud:
+  google_actions:
+    filter:
+      include_entities:
+        - input_select.home_mode
+        - input_boolean.night
+        - input_boolean.tv_lights
+template: !include template.yaml
+shell_command:
+  make_playroom_white: curl https://maker.ifttt.com/trigger/white/with/key/iiZfeFdLBP4eDZWZade0IlANQPQ57Ce2Cpw3AtjwWlM
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24

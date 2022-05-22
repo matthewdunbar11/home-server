@@ -1,0 +1,24 @@
+- id: gates-closed
+  alias: Gates - Closed
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.yard_secure
+      to: "on"
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.backyard_secure
+    # - service: shell_command.make_playroom_white
+
+- id: gates-opened
+  alias: Gates - Opened
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.yard_secure
+      to: "off"
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.backyard_insecure

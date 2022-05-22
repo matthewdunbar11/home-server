@@ -1,0 +1,45 @@
+- id: "away-presence-detection"
+  alias: Every One's Away
+  trigger:
+    - platform: state
+      entity_id: person.matthew
+      to: away
+      from: home
+    - platform: state
+      entity_id: person.vanessa
+      to: away
+      from: home
+  condition:
+    - condition: state
+      entity_id: person.matthew
+      state: away
+    - condition: state
+      entity_id: person.vanessa
+      state: away
+  action:
+    - service: input_boolean.turn_on
+      target:
+        entity_id: input_boolean.away
+    - service: notify.mobile_app_iphone
+      data:
+        message: House is in now empty
+  mode: single
+- id: "home-presence-detection"
+  alias: Someone's Home
+  trigger:
+    - platform: state
+      entity_id: person.matthew
+      to: home
+      from: away
+    - platform: state
+      entity_id: person.vanessa
+      to: home
+      from: away
+  action:
+    - service: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.away
+    - service: notify.mobile_app_iphone
+      data:
+        message: House is now occupied
+  mode: single

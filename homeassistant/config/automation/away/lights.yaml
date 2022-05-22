@@ -1,0 +1,35 @@
+- id: "away-lights-off"
+  alias: Away - Lights Out
+  trigger:
+    - platform: state
+      entity_id: input_boolean.away
+      to: "on"
+  action:
+    - service: light.turn_off
+      target:
+        area_id:
+          - bedroom
+          - dining_room
+          - downstairs_bedroom
+          - kitchen
+          - living_room
+          - office
+          - spare_bedroom
+          - stairs
+          - upstairs_bathroom
+  mode: single
+- id: "away-lights-on"
+  alias: Away - Lights Out
+  trigger:
+    - platform: state
+      entity_id: input_boolean.away
+      to: "off"
+  action:
+    - service: light.turn_on
+      target:
+        area_id:
+          - dining_room
+          - kitchen
+          - living_room
+          - stairs
+  mode: single

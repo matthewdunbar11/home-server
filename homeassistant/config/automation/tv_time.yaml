@@ -1,0 +1,111 @@
+- id: tv-soundbar-initialize
+  alias: TV Time - Soundbar Initialize
+  trigger:
+    - platform: state
+      entity_id: media_player.tv
+      to: "idle"
+      from: "off"
+  action:
+    - service: remote.send_command
+      target:
+        entity_id: remote.living_room_remote_remote
+      data:
+        device: sound_bar
+        command:
+          - volume_up
+          - volume_up
+    # - service: remote.send_command
+    #   target:
+    #     entity_id: remote.living_room_remote_remote
+    #   data:
+    #     device: tv
+    #     command: power_off
+- id: tv-time-ready
+  alias: TV Time - Ready
+  trigger:
+    - platform: state
+      entity_id: media_player.tv
+      to: "Idle"
+    - platform: state
+      entity_id: media_player.tv
+      to: "paused"
+  condition: &tv-time-condition
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.tv_lights
+        state: "on"
+      - condition: state
+        entity_id: input_select.home_mode
+        state: Day
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.tv_paused
+      data:
+        transition: 3
+- id: tv-time-dim
+  alias: TV Time - Dim
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.watching_movie
+      to: "on"
+  condition: *tv-time-condition
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.tv_playing
+      data:
+        transition: 3
+- id: tv-time-done
+  alias: TV Time - Done
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.watching_movie
+      to: "off"
+  condition: *tv-time-condition
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.evening
+      data:
+        transition: 6
+- id: enable-tv-lights
+  alias: TV Time - Enable
+  trigger:
+    - platform: time
+      at: "19:30:00"
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.tv_lights
+- id: disable-tv-lights
+  alias: TV Time - Enable
+  trigger:
+    - platform: time
+      at: "07:30:00"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.tv_lights
+- id: tv-lights-disabled
+  alias: TV Time - Disabled
+  trigger:
+    - platform: state
+      entity_id: input_boolean.tv_lights
+      to: "off"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: media_player.tv
+        state:
+          - "playing"
+          - "paused"
+          - "idle"
+      - condition: time
+        after: "17:30:00"
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.evening
+      data:
+        transition: 6
