@@ -5,8 +5,12 @@ services:
     network_mode: host
     volumes:
       - /etc/localtime:/etc/localtime:ro
+      - homeassistant_storage:/config/.storage
+      - homeassistant_cloud:/config/.cloud
     privileged: true
     restart: unless-stopped
+    # ports:
+    #   - 8123:8123
   mqtt:
     container_name: mqtt
     build: ./mqtt
@@ -14,7 +18,6 @@ services:
       - 1833:1833
   frigate:
     container_name: frigate
-    pull_policy: always
     privileged: true # this may not be necessary for all setups
     restart: unless-stopped
     build: ./frigate
@@ -32,6 +35,7 @@ services:
     depends_on:
       - mqtt
 volumes:
-  # homeassistant_config:
+  homeassistant_storage:
+  homeassistant_cloud:
   # frigate_config:
   frigate_storage:
