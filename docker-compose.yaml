@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   # homeassistant:
   #   image: ghcr.io/home-assistant/home-assistant:2022.5.2
@@ -8,11 +8,16 @@ services:
   #     - /etc/localtime:/etc/localtime:ro
   #   privileged: true
   #   restart: unless-stopped
+  mqtt:
+    container_name: mqtt
+    build: ./mqtt
+    ports:
+      - 1833:1833
   frigate:
     container_name: frigate
     privileged: true # this may not be necessary for all setups
     restart: unless-stopped
-    image: blakeblackshear/frigate:stable-amd64
+    build: ./frigate
     shm_size: "64mb" # update for your cameras based on calculation above
     volumes:
       - /etc/localtime:/etc/localtime:ro
@@ -23,7 +28,9 @@ services:
       #     size: 1000000000
     ports:
       - "5000:5000"
-      - "1935:1935" # RTMP feeds    
+      - "1935:1935" # RTMP feeds
+    depends_on:
+      - mqtt
 volumes:
   # homeassistant_config:
   # frigate_config:
