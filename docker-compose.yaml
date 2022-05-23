@@ -5,8 +5,9 @@ services:
     network_mode: host
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - homeassistant_storage:/config/.storage
-      - homeassistant_cloud:/config/.cloud
+      # - homeassistant_storage:/config/.storage
+      # - homeassistant_cloud:/config/.cloud
+      - homeassistant_config:/config/
     privileged: true
     restart: unless-stopped
     # ports:
@@ -37,5 +38,6 @@ services:
 volumes:
   homeassistant_storage:
   homeassistant_cloud:
+  homeassistant_config:
   # frigate_config:
   frigate_storage:
