@@ -1,5 +1,5 @@
 - id: "1619903967240"
-  alias: I am Home
+  alias: I'm Home
   description: ""
   trigger:
     - platform: zone
