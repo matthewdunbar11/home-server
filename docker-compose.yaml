@@ -7,7 +7,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - homeassistant_storage:/config/.storage
       - homeassistant_cloud:/config/.cloud
-      # - homeassistant_config:/config/
     privileged: true
     restart: unless-stopped
     # ports:
