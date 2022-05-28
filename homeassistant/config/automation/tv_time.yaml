@@ -14,7 +14,7 @@
         command:
           - volume_up
           - volume_up
-      to: "paused"
+        to: "paused"
 - id: tv-time-start
   alias: TV Time - Start
   trigger:
