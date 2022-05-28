@@ -1,3 +1,3 @@
-FROM ghcr.io/home-assistant/home-assistant:2022.5.2
+FROM ghcr.io/home-assistant/home-assistant:2022.5.5
 
 COPY ./config /config
