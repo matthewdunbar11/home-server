@@ -22,6 +22,8 @@ services:
     restart: unless-stopped
     build: ./frigate
     shm_size: "64mb" # update for your cameras based on calculation above
+    devices:
+      - /dev/apex_0:/dev/apex_0
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - frigate_storage:/media/frigate
