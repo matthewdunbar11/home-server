@@ -27,6 +27,8 @@ services:
     devices:
       - /dev/apex_0:/dev/apex_0
     pull_policy: always
+    environment:
+      - VERSION=1
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - frigate_storage:/media/frigate
