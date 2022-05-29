@@ -53,6 +53,10 @@ cameras:
             - detect
 detect:
   enabled: true
+detectors:
+  coral_pci:
+    type: edgetpu
+    device: pci
 record:
   enabled: true
   retain:
