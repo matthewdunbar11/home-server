@@ -17,10 +17,11 @@ services:
     image: "traefik/whoami"
     container_name: "simple-service"
     network_mode: br0
+    ports:
+      - '80:80'
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.whoami.rule=Host(`whoami.proxy.dunbarfamily.xyz`)"
-      - "traefik.http.services.whoami.loadbalancer.server.port=80"
       - "traefik.http.routers.whoami.entrypoints=web"
 #  nginx:
 #    image: 'jc21/nginx-proxy-manager:latest'
