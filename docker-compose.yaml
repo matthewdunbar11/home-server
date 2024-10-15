@@ -34,6 +34,19 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin0
+    volumes:
+      - /config
+      - /cache
+      - type: bind
+        source: /media
+        target: /media
+    restart: 'unless-stopped'
+    # Optional - alternative address used for autodiscovery
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://jellyfin.proxy.dunbarfamily.xyz
 #  mqtt:
 #    container_name: mqtt
 #    build: ./mqtt
