@@ -9,7 +9,9 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entryPoints.web.address=:80"
-    network_mode: br0
+     networks:
+        br0:
+          ipv4_address: 192.168.4.250
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
