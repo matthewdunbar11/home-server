@@ -40,9 +40,7 @@ services:
     volumes:
       - /config
       - /cache
-      - type: bind
-        source: /media
-        target: /media
+      - /media:/media
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
     environment:
