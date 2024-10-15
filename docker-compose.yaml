@@ -3,7 +3,7 @@ services:
   nginx:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
-    network: br02
+    network_mode: br0
 #    ports:
 #      - '80:80'
 #      - '81:81'
