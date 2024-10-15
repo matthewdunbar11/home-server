@@ -1,5 +1,18 @@
 version: "3"
 services:
+  traefik:
+    image: "traefik:v3.1"
+    container_name: "traefik"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints.web.address=:80"
+    network_mode: br0
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
   nginx:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
