@@ -1,52 +1,8 @@
 version: "3"
 services:
-  homeassistant:
-    build: ./homeassistant
-    network_mode: host
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - homeassistant_storage:/config/.storage
-      - homeassistant_cloud:/config/.cloud
-    privileged: true
-    pull_policy: always
-    restart: unless-stopped
-    # ports:
-    #   - 8123:8123
   mqtt:
     container_name: mqtt
     build: ./mqtt
     pull_policy: always
     ports:
       - 1833:1833
-  frigate:
-    container_name: frigate
-    privileged: true # this may not be necessary for all setups
-    restart: unless-stopped
-    build:
-      context: ./frigate
-      args:
-        VERSION: 1
-    shm_size: "64mb" # update for your cameras based on calculation above
-    devices:
-      - /dev/apex_0:/dev/apex_0
-    pull_policy: always
-    environment:
-      - VERSION=1
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - frigate_storage:/media/frigate
-      # - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
-      #   target: /tmp/cache
-      #   tmpfs:
-      #     size: 1000000000
-    ports:
-      - "5000:5000"
-      - "1935:1935" # RTMP feeds
-    depends_on:
-      - mqtt
-volumes:
-  homeassistant_storage:
-  homeassistant_cloud:
-  homeassistant_config:
-  # frigate_config:
-  frigate_storage:
