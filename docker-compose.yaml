@@ -13,6 +13,13 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
+  whoami:
+    image: "traefik/whoami"
+    container_name: "simple-service"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.proxy.dunbarfamily.xyz`)"
+      - "traefik.http.routers.whoami.entrypoints=web"
   nginx:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
